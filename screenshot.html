@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Screenshot Selection</title>
+    <style>
+        #screenshot {
+            width: 100%;
+            height: auto;
+        }
+
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #message,
+        #error {
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            z-index: 1;
+            position: fixed;
+            /* Adjust padding as needed */
+        }
+
+        #error {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="message">Waiting for data.....</div>
+    <div id="error"></div>
+    <img id="screenshot" src="">
+    <canvas id="canvas"></canvas>
+    <script src="screenshot.js"></script>
+</body>
+
+</html>

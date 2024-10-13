@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "Tabshot: ",
+    "version": "1.0",
+    "description": "Tabshot: Screenshot your tab and upload to Drive",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "downloads",
+        "identity"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "screenshot.html",
+                "screenshot.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "oauth2": {
+        "client_id": "119211558397-1qluei34v9778chogrq8ruheg1pu55ti.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/drive.file"
+        ]
+    }
+}
